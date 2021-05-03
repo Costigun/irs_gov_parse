@@ -103,8 +103,9 @@ def download_files(list_tax_form):
             os.mkdir(form_name)
         except FileExistsError:
             pass
-        r_index = names.index(form_name)
-        l_index = names.index(form_name)
+        # indecies to define names range in list of all tax form names
+        r_index = names.index(form_name) # index of first form_name mention on list
+        l_index = names.index(form_name) # index of last form_name mention on list
         for name in names:
             if name == form_name:
                 r_index += 1
